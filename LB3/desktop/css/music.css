@@ -1,0 +1,10 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+footer ul {
+    display:flex;
+    padding-left: 200px;
+    justify-content: space-around;
+}

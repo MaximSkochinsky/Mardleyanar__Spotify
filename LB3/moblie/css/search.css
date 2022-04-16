@@ -1,0 +1,171 @@
+@media screen  and (max-width: 600px){
+
+    html, body {
+        width: 395px;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    
+
+
+    body {
+        background: rgb(28,28,28);
+        background: linear-gradient(180deg, rgba(28,28,28,1) 6%, rgba(147,147,147,1) 93%, rgba(167,167,172,1) 100%);
+        border : solid black 10px;
+        min-height: 950px;
+        min-width: 395px;
+        font-family: 'Life Savers', sans-serif;
+    }
+
+    
+  form {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    margin: 0 0 30px;
+  }
+  
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 5px solid transparent;
+    border-radius: inherit;
+  }
+  
+  input[type="search"]::placeholder {
+    color: rgb(255, 255, 255);
+  }
+  
+
+  button[type="submit"]:focus,
+  input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+  }
+  
+  form.nosubmit {
+   width: 400px; 
+   height: 60px;
+   border: none;
+   padding: 10px 0px 0px 20px;
+  }
+  
+  input.nosubmit {
+    
+    font-size: 20px;
+    border: 1px solid #555;
+    width: 90%;
+    padding: 9px 4px 9px 60px;
+     background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 10px center;
+  }
+
+
+    img {
+        width: 15%;
+        height: 15%;
+    }
+    
+
+    header h1 {
+        font-family: 'Life Savers', sans-serif;
+        color: white;
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    header {
+        width: 428px;
+        min-height: 100px;
+        border-bottom: solid black 1px;
+        margin-left: 0%;
+    }
+
+   .user-info {
+       display: flex;
+   }
+
+   .user-info  #avatar{
+        padding: 20px 0px 10px 20px;
+    }
+
+    .user-info  h1{
+        font-size: 19px;
+        padding: 35px 0px 10px 20px;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
+    footer {
+        background: rgb(28,28,28);
+        background: linear-gradient(0deg, rgba(28,28,28,1) 6%, rgba(147,147,147,1) 93%, rgba(167,167,172,1) 100%);
+        min-height: 95px;
+        border-top: solid black 1px;
+    }
+
+    footer ul {
+        list-style-type: none;
+        display: flex;
+        margin-left: -50px;
+    }
+
+    footer ul li {
+        padding-left: 70px;
+    }
+
+    h2 {
+        text-align: center;
+        color: white;
+    }
+
+    .music {
+        padding-left: -30px;
+        margin-top: -20px;
+        overflow-x: scroll;
+        overflow-y: hidden;  
+    }
+
+    .music ul {
+        display: flex;
+        padding-left : 0px;
+        list-style-type: none;
+        white-space: nowrap;
+    }
+
+    .music ul li {
+        display:inline-block;
+    }
+
+
+
+
+    ul li img {
+        width: 120px;
+        height: 120px;
+        border: solid black 5px;
+    }
+
+
+    .albom {
+        font-size: 12px;
+    }
+
+    .author {
+        font-size: 16px;
+        color: rgb(195, 173, 173)
+    }
+
+    section h2 {
+        margin: 5px 0px 0px 0px;
+    }
+
+}
