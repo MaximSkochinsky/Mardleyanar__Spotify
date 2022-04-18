@@ -41,7 +41,7 @@
        display: flex;
    }
 
-   .user-info  #avatar{
+   .user-info  .avatar{
         padding: 20px 0px 10px 20px;
     }
 

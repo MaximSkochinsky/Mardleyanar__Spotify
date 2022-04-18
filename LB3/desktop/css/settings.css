@@ -30,7 +30,7 @@ html, body{
 
 
 
-#avatar {
+.avatar {
     position: relative;
     float:right;
     bottom: 120px;

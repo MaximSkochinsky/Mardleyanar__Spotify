@@ -60,7 +60,7 @@ header {
 }
 
 
-#avatar {
+.avatar {
     position: relative; margin-top: -50px;
 }
 
