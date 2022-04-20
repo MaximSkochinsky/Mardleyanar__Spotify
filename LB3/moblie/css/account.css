@@ -40,6 +40,41 @@
         display: flex;
     }
 
+    .settings_list {
+        display: flex;
+        justify-items: left;
+        margin: 0;
+    }
+
+    .settings_items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    
+    .settings_items span {
+        max-height: 10px;
+    }
+
+
+    span {
+        text-align: left;
+    }
+
+    .key {
+        color: white;
+    }
+
+    .value {
+        color:rgb(195, 173, 173);
+    }
+
+    .main-header {
+        padding: 0px 0px 0px 70px;
+        font-size: 50px;
+    }
+
    .user-info {
        display: flex;
    }
@@ -79,8 +114,7 @@
     }
 
     .settings {
-        height: 800px;
-        padding-left: -30px; 
+        height: 100%;
     }
 
   
@@ -131,8 +165,6 @@
 
 
     .settings span{
-        margin-left: -170px;
-        color: white;
         font-size: 40px;
     }
 

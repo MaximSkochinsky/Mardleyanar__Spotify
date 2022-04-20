@@ -1,44 +1,56 @@
-
-
-h1 {
-    font-family: 'Life Savers', sans-serif;
-    color: white;
-    padding-left: 100px;
-    font-size: 72px;
-}
-
-header {
-    min-width: 200px;
-    border-bottom: solid black 1px;
-    margin-left: 0%;
-}
-
-
 body {
-    background: rgb(28,28,28);
-    background: linear-gradient(180deg, rgba(28,28,28,1) 6%, rgba(147,147,147,1) 93%, rgba(167,167,172,1) 100%);
-    border : solid black 10px;
-    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Life Savers', sans-serif;
 }
 
-html, body{ 
-    min-width: 1440px;
-    min-height: 1024px;
-    overflow: auto;
+html, body {
+    min-width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(28,28,28,1) 6%, rgba(147,147,147,1) 93%, rgba(167,167,172,1) 100%);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 1) inset;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    font-family: 'Life Savers', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px black solid;
+}
 .avatar {
-    position: relative;
-    float:right;
-    bottom: 170px;
-    right: 100px;
- }
+    width: 150px;
+    height: 150px;
+    margin: 10px 0px 10px 0px;
+    border: solid black 1px;
+}
 
 
 
- .dropbtn {
+.dropbtn {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
@@ -50,20 +62,21 @@ html, body{
 .dropdown {
     position: relative;
     display: inline-block;
-    float: right;
+    /* min-height: 100px; */
+    padding-top: 10px;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    top: -20px;
-    right: 100px;
+    /* bottom : 95px; */
+    /* left: 50px; */
+    top: 170px;
     background-color: #f1f1f1;
-    max-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 150px;
     z-index: 1;
-    background: linear-gradient(rgba(74, 69, 69, 0.6), rgb(61, 58, 58));
+    background: linear-gradient(rgba(74, 69, 69, 0.8), rgb(61, 58, 58));
 }
 
 /* Links inside the dropdown */
@@ -71,8 +84,9 @@ html, body{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
+    text-align: left;
     display: block;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 /* Change color of dropdown links on hover */
@@ -84,59 +98,110 @@ html, body{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
-
-
-ul {
-    width: 100%; /* combined width of all LI's */ 
-    height: 100%;
-    margin: 0; 
-    padding: 0; 
-    list-style-type: none;
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 0 50px 50px
 }
 
-ul li{
-    width: 25%; /* combined width of all LI's */ 
-    height: 200px; 
+.row-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 50px;
+    align-items: center;
+    min-width: 90vw;
+    max-width: 90vw;
+    padding-bottom: 15px;
+}
+
+.row-wrapper::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: #CCCCCC;
+}
+
+.nav-button-text {
+    font-family: 'Life Savers', sans-serif;
+    color: white;
+    padding-left: 0px;
+    font-size: 20px;
+}
+
+.row-wrapper::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.row-wrapper::-webkit-scrollbar-thumb
+{
+	background-color: #FFF;
+	background-image: -webkit-linear-gradient(0deg,
+	                                          rgba(0, 0, 0, 1) 0%,
+											  rgba(0, 0, 0, 1) 25%,
+											  transparent 100%,
+											  rgba(0, 0, 0, 1) 75%,
+											  transparent)
 }
 
 
-ul li img {
-    width: 250px;
-    height: 250px;
+figure {
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    min-width: 240px;
+}
+
+.item__avatar {
+    width: 220px;
+    height: 220px;
+    min-width: 200px;
+    min-height: 200px;
     border: 5px solid rgb(0, 0, 0);
 }
 
-
-.author {
-    font-family: 'Life Savers', sans-serif;
-    font-size: 20px;
-    color: rgba(33, 32, 32, 0.6)
+.item__caption-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-}
-
-.albom {
+.item__caption-item_albom {
     font-family: 'Life Savers', sans-serif;
     font-size: 25px;
-    color: rgba(0, 0, 0, 0.807)
+    color: rgba(0, 0, 0, 0.807);
 }
 
-span {
-    margin-top: 0.2em; /* Отступ сверху */
-    margin-bottom: 0.5em; /* Отступ снизу */
+.item__caption-item_author {
+    font-family: 'Life Savers', sans-serif;
+    font-size: 20px;
+    color: rgba(33, 32, 32, 0.6);
 }
-
 
 footer {
-    background: rgb(28,28,28);
     background: linear-gradient(0deg, rgba(28,28,28,1) 6%, rgba(147,147,147,1) 93%, rgba(167,167,172,1) 100%);
+    /* border-bottom: solid black 10px; */
+    /* border-top: none; */
+    margin-bottom: 10px;
+    width: calc(100% - 20px);
 }
 
-
-footer ul {
-    display:flex;
-    padding-left: 100px;
+.footer__list {
+    width: 100%;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.footer__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

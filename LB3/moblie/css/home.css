@@ -7,7 +7,18 @@
     }
 
     
+    .section_header {
+        margin: -20px 0px 0px 0px;
+    }
 
+    .fa.fa-cog {
+        font-size: 50px;
+        color: white; 
+        padding: 30px 0px 0px 20px;
+    }
+
+
+    
 
     body {
         background: rgb(28,28,28);
@@ -23,6 +34,10 @@
         height: 15%;
     }
     
+
+    section h2 {
+        margin: -20px 0px 0px 0px;
+    }
 
     header h1 {
         font-family: 'Life Savers', sans-serif;

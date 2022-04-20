@@ -5,87 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/home.css" rel="stylesheet">
-    <link href="../css/library.css" rel="stylesheet">
-    <link href="../css/search.css" rel="stylesheet">
     <link href="../css/music.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
     <link href="http://fonts.cdnfonts.com/css/life-savers" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="music-menu" style="height: 200px;">
-        <nav class="menu">
-            <h1 style="position:absolute; top: -40px; font-size: 100px;">Listen your favorite music</h1>
-        </nav>
-        <div class="dropdown">
-            <img class="avatar" src="../img/avatar.jpg" width="150px" height="150px"></img>
-            <div class="dropdown-content" style="position: absolute; top: -70px;">
-                <a href="./settings.html">Account</a>
-                <a href="./language.html">Language</a>
-              <a href="#">Log out</a>
-            </div>
-          </div>
-    </header>
-    <main style="min-height:700px;">
-        <h2 style="margin-top: 20px; ">We hope you will like it!</h2>
-        <div class="main-theme" style="min-height: 270px;">
-            <figure>
-                <img src="..\img\ACB.jpg" style="width: 400px; height: 400px; padding-left: 950px;"></img>
-                <figcaption><span class="albom" style="padding-left: 950px; font-size: 40px;">AC Brotherhood OST</span><br>
-                    <span class="author" style="padding-left: 950px; font-size: 30px;">Jesper Kyd</span></figcaption>
+    <div class="wrapper">
+        <header>
+            <h1>Good Morning, Mardleynar!</h1>
+            <div class="dropdown">
+                <img class="avatar" src="../img/avatar.jpg" width="80px" height="80px"></img>
+                <div class="dropdown-content">
+                  <a href="./account.html">Account</a>
+                  <a href="./language.html">Language</a>
+                  <a href="#">Log out</a>
+                </div>
+              </div>
+        </header>
+
+        <div class="main-figure">
+            <figure class="main__item">
+                <img class="main__item__avatar" src="..\img\ACB.jpg"></img>
+                <figcaption class="main__item__caption-wrapper">
+                    <span class="main__item__caption-item    main__item__caption-item_albom">AC Brotherhood OST</span>
+                    <span class="main__item__caption-item    main__item__caption-item_author">Jesper Kyd</span>
+                </figcaption>
             </figure>
         </div>
-        <div style="margin-top:70px;">
-            <ul style="display: flex; margin-left: 80px;  margin-top: -10px;">
-                <li>
-                    <figure>
-                        <img src="..\img\ACB.jpg" style="width: 250px; height: 250px;"></img>
-                        <figcaption><span class="albom">AC Brotherhood OST</span><br>
-                            <span class="author">Jesper Kyd</span></figcaption>
+        <section class="list-wrapper">
+            <h1 style="margin-bottom: -30px">We hope you will like it!</h1>
+            <section class="row-wrapper" style="margin-top: 50px;">
+                    <figure class="item">
+                        <img class="item__avatar" src="..\img\ACB.jpg"></img>
+                        <figcaption class="item__caption-wrapper">
+                            <span class="item__caption-item item__caption-item_albom">AC Brotherhood OST</span>
+                            <span class="item__caption-item item__caption-item_author">Jesper Kyd</span>
+                        </figcaption>
                     </figure>
+                    <figure class="item">
+                        <img class="item__avatar" src="..\img\ACB.jpg"></img>
+                        <figcaption class="item__caption-wrapper">
+                            <span class="item__caption-item item__caption-item_albom">AC Brotherhood OST</span>
+                            <span class="item__caption-item item__caption-item_author">Jesper Kyd</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="item">
+                        <img class="item__avatar" src="..\img\ACB.jpg"></img>
+                        <figcaption class="item__caption-wrapper">
+                            <span class="item__caption-item item__caption-item_albom">AC Brotherhood OST</span>
+                            <span class="item__caption-item item__caption-item_author">Jesper Kyd</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="item">
+                        <img class="item__avatar" src="..\img\ACB.jpg"></img>
+                        <figcaption class="item__caption-wrapper">
+                            <span class="item__caption-item item__caption-item_albom">AC Brotherhood OST</span>
+                            <span class="item__caption-item item__caption-item_author">Jesper Kyd</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="item">
+                        <img class="item__avatar" src="..\img\ACB.jpg"></img>
+                        <figcaption class="item__caption-wrapper">
+                            <span class="item__caption-item item__caption-item_albom">AC Brotherhood OST</span>
+                            <span class="item__caption-item item__caption-item_author">Jesper Kyd</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="item">
+                        <img class="item__avatar" src="..\img\ACB.jpg"></img>
+                        <figcaption class="item__caption-wrapper">
+                            <span class="item__caption-item item__caption-item_albom">AC Brotherhood OST</span>
+                            <span class="item__caption-item item__caption-item_author">Jesper Kyd</span>
+                        </figcaption>
+                    </figure>
+                </section>
+
+        </section>
+        <footer>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="./home.html"><i class="fa fa-home" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">HOME</span>
+                </li>
+                <li class="footer__item">
+                    <a href="./search.html"><i class="fa fa-search" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">SEARCH</span>
                 </li>
                 <li>
-                    <figure>
-                        <img src="..\img\ACB.jpg" style="width: 250px; height: 250px;"></img>
-                        <figcaption><span class="albom">AC Brotherhood OST</span><br>
-                            <span class="author">Jesper Kyd</span></figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="..\img\ACB.jpg" style="width: 250px; height: 250px;"></img>
-                        <figcaption><span class="albom">AC Brotherhood OST</span><br>
-                            <span class="author">Jesper Kyd</span></figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="..\img\ACB.jpg" style="width: 250px; height: 250px;"></img>
-                        <figcaption><span class="albom">AC Brotherhood OST</span><br>
-                            <span class="author">Jesper Kyd</span></figcaption>
-                    </figure>
+                    <a href="./library.html"><i class="fa fa-book" aria-hidden="true"></i></i></a><br>
+                    <span class="nav-button-text">LIBRARY</span>
                 </li>
             </ul>
-        </div>
-    </main>
-    <br>
-    <footer id="library-footer" style="margin-top: 200px;">
-        <ul>
-            <li>
-                <a href="./home.html"><i class="fa fa-home" aria-hidden="true" style="font-size:150px;color:black;"></i></a><br>
-                <span style="font-family: 'Life Savers', sans-serif; color: white; padding-left: 20px; font-size: 30px;">HOME</span>
-            </li>
-            <li>
-                <a href="./search.html"><i class="fa fa-search" aria-hidden="true" style="font-size:150px;color:black;"></i></a><br>
-                <span style="font-family: 'Life Savers', sans-serif; color: white; padding-left: 20px; font-size: 30px;">SEARCH</span>
-            </li>
-            <li>
-                <a href="./library.html"><i class="fa fa-book" aria-hidden="true" style="font-size:150px;color:black;"></i></i></a><br>
-                <span style="font-family: 'Life Savers', sans-serif; color: white; padding-left: 20px; font-size: 30px;">LIBRARY</span>
-            </li>
-        </ul>
+            
+        </footer>
         
-    </footer>
+    </div>
     
 </body>
 </html>

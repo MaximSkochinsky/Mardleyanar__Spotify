@@ -61,6 +61,16 @@
         border-top: solid black 1px;
     }
 
+    .user_nav_buttons {
+        display: flex;
+        margin-top: 25px;
+    }
+
+    nav {
+        margin-top: 10px;
+        margin-left: 80px;
+    }
+
     footer ul {
         list-style-type: none;
         display: flex;
