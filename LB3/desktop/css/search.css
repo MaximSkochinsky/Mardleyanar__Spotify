@@ -1,15 +1,3 @@
-body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Life Savers', sans-serif;
-}
-
-html, body {
-    min-width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
 .wrapper {
     width: 100%;
     min-height: 100vh;
@@ -21,137 +9,15 @@ html, body {
     align-items: center;
 }
 
-h1, h2 {
-    font-family: 'Life Savers', sans-serif;
-    color: white;
-}
 
-h1 {
-    font-size: 52px;
-}
-
-h2 {
-    font-size: 42px;
-}
-
-header {
+.header-dark {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     border-bottom: 1px black solid;
 }
-.avatar {
-    width: 150px;
-    height: 150px;
-    margin: 10px 0px 10px 0px;
-    border: solid black 1px;
-}
 
-
-
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    /* min-height: 100px; */
-    padding-top: 10px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    /* bottom : 95px; */
-    /* left: 50px; */
-    top: 170px;
-    background-color: #f1f1f1;
-    min-width: 150px;
-    z-index: 1;
-    background: linear-gradient(rgba(74, 69, 69, 0.8), rgb(61, 58, 58));
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    text-align: left;
-    display: block;
-    font-size: 28px;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-.list-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    padding: 0 50px 50px
-}
-
-.row-wrapper {
-    display: flex;
-    overflow-x: auto;
-    gap: 50px;
-    align-items: center;
-    min-width: 90vw;
-    max-width: 90vw;
-    padding-bottom: 21px;
-}
-
-.row-wrapper::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
-	background-color: #CCCCCC;
-}
-
-.row-wrapper::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
-}
-
-.row-wrapper::-webkit-scrollbar-thumb
-{
-	background-color: #FFF;
-	background-image: -webkit-linear-gradient(0deg,
-	                                          rgba(0, 0, 0, 1) 0%,
-											  rgba(0, 0, 0, 1) 25%,
-											  transparent 100%,
-											  rgba(0, 0, 0, 1) 75%,
-											  transparent)
-}
-
-
-figure {
-    margin: 0;
-}
-
-
-
-.nav-button-text {
-    font-family: 'Life Savers', sans-serif;
-    color: white;
-    padding-left: 0px;
-    font-size: 20px;
-}
 
 form {
     color: #555;
@@ -202,6 +68,7 @@ form {
     min-height: 14vh;
 }
 
+
 .item {
     display: flex;
     flex-direction: column;
@@ -218,42 +85,33 @@ form {
     border: 5px solid rgb(0, 0, 0);
 }
 
-.item__caption-wrapper {
-    display: flex;
-    flex-direction: column;
-}
 
-.item__caption-item_albom {
-    font-family: 'Life Savers', sans-serif;
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.807);
-}
+@media only screen and (max-width: 500px){
 
-.item__caption-item_author {
-    font-family: 'Life Savers', sans-serif;
-    font-size: 20px;
-    color: rgba(33, 32, 32, 0.6);
-}
 
-footer {
-    background: linear-gradient(0deg, rgba(28,28,28,1) 6%, rgba(147,147,147,1) 93%, rgba(167,167,172,1) 100%);
-    /* border-bottom: solid black 10px; */
-    /* border-top: none; */
-    margin-bottom: 10px;
-    width: calc(100% - 20px);
-}
+    input.nosubmit {
+        margin-left: 220px;
+        padding: 9px 4px 9px 60px;
+        width: 40%;
+    }
 
-.footer__list {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-}
+    .header-dark h1 {
+        font-size: 22px;
+    }
 
-.footer__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .list-wrapper h1 {
+        font-size: 30px;
+    }
 
+    .item__avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .row-wrapper {
+        flex-direction: column;
+        overflow-y: scroll;
+        max-height: 50vh;
+    }
+
+}
