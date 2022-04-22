@@ -34,15 +34,6 @@ nav {
     align-items: center;
 }
 
-.header-dark {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px black solid;
-}
-
-
 .sort-menu {
     display: flex;
     align-items: center;
@@ -135,6 +126,10 @@ select, option {
         width: 80%;
     }
 
+    .header-dark {
+        justify-content: space-around;
+    }
+
     .select-dropdown,
     .select-dropdown * {
         min-width: 20px;
@@ -155,8 +150,6 @@ select, option {
         min-height: 170px;
         margin: 0px 0px 0px 20px;
     }
-
-  
 
     .nav-item {
         font-size: 20px;

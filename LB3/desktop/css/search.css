@@ -9,16 +9,6 @@
     align-items: center;
 }
 
-
-.header-dark {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px black solid;
-}
-
-
 form {
     color: #555;
     display: flex;

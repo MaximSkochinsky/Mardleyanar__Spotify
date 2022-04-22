@@ -18,6 +18,16 @@ html, body {
 }
 
 
+.header-dark {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px black solid;
+}
+
+
+
 .fa.fa-home {
     font-size:70px;
     color:black;
