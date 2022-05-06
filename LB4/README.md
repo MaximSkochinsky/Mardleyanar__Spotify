@@ -21,5 +21,8 @@
 ### https://mardleynar-spotify-desktop-app.herokuapp.com/
 
 
+## Link 2 (app, reserve domain):
+### https://myspotify.kostphoenix.me/
+
 
 
