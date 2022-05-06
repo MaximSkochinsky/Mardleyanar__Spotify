@@ -1,0 +1,102 @@
+
+.header-dark {
+    padding-left: 35%;
+}
+
+.key {
+    font-size: 40px;
+}
+
+.value {
+    font-size: 40px;
+    color: white;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.user__info {
+    min-width: calc(100% - 10px * 2);
+    margin-left: 50px;
+    padding-top: 50px;
+}
+
+.user__name {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-width: calc(100% - 10px * 2);
+    min-height: 20vh;
+}
+
+.change_email {
+    min-width: 100%;
+    margin-left: 50%;
+}
+
+
+.change_email_button {
+    font-family: 'Life Savers', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    border-radius: 40px;
+    width: 20%;
+    height: 10vh;
+    color: black;
+    background-color: rgba(171, 160, 160, 0.807);
+    top: 50%;
+    left: 75%;
+}
+
+
+.user__email__items {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.user__email {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    min-width: calc(100% - 10px * 2);
+    min-height: 20vh;
+}
+
+.user__subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-width: calc(100% - 10px * 2);
+    min-height: 25vh;
+}
+
+
+
+@media only screen and (max-width: 500px){
+    
+    .user__email__items {
+        min-width: 60%;
+    }
+
+    .change_email {
+        width: 30px;
+        min-width: 30px;
+    }
+    
+    .key {
+        margin-left: -10px;
+    }
+
+    .value {
+        margin-left: -10px;
+    }
+
+    .change_email_button {
+        position: absolute;
+        left: 280px;
+        width: 30%;
+        font-size: 20px;
+        top: 310px;
+    }
+}

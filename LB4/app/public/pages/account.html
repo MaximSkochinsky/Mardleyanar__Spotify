@@ -1,0 +1,50 @@
+<div class="wrapper">
+        <header class="header-dark">
+            <h1>Account</h1>
+            <div class="dropdown">
+                <img class="avatar"  src="../img/avatar.jpg" width="80px" height="80px"></img>
+                <div class="dropdown-content">
+                  <a href="/account" onclick="route()">Account</a>
+                  <a href="/info" onclick="route()">Info</a>
+                  <a href="/" onclick="logOut()">Log out</a>
+                </div>
+              </div>
+        </header>
+        <div class="user__info">
+            <section class="user__name">
+               <span class="key">Username</span>
+               <span class="value" id="username">Mardleynar</span>
+            </section>
+            <section class="user__email">
+                <div class="user__email__items">
+                    <span class="key">Email</span>
+                    <span class="value" id="email">mard@gmail.com</span>
+                </div>
+                <div class="change_email">
+                    <button class="change_email_button" onclick="changeEmail()">Change</button>
+                </div>
+            </section>
+            <section class="user__subscription">
+                <span class="key">Subscription</span>
+                <span class="value">Free</span>
+            </section>
+        </div>
+        <footer class="footer-dark">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="/"  onclick="buttonRoute()"><i class="fa fa-home" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">HOME</span>
+                </li>
+                <li class="footer__item">
+                    <a href="/search"  onclick="buttonRoute()"><i class="fa fa-search" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">SEARCH</span>
+                </li>
+                <li>
+                    <a href="/library"  onclick="buttonRoute()"><i class="fa fa-book" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">LIBRARY</span>
+                </li>
+            </ul>
+            
+        </footer>
+        
+</div>

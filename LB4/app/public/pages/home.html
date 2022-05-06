@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <header class="header-dark">
+        <h1 id="greetings">Good Morning, Mardleynar!</h1>
+        <div class="dropdown">
+            <img class="avatar"  src="../img/avatar.jpg" width="80px" height="80px"></img>
+            <div class="dropdown-content">
+                <a href="/account" onclick="route()">Account</a>
+                <a href="/info" onclick="route()">Info</a>
+                <a href="/" onclick="logOut()">Log out</a>
+            </div>
+        </div>
+    </header>
+    <section class="scroll">
+        <div class="list-wrapper" id="playlists">
+            <h2>Random Tracks</h2>
+            <section class="row-wrapper" id="popular-album">
+                <div class="spinner">
+                    <div class="circle"></div>
+                </div>
+            </section>
+
+            <h2>Popular Playlist Tracks</h2>
+            <section class="row-wrapper" id="popular-playlist">
+                <div class="spinner">
+                    <div class="circle"></div>
+                </div>
+            </section>
+
+            <h2>Popular Rock Tracks</h2>
+            <section class="row-wrapper" id="popular-rock">
+                <div class="spinner">
+                    <div class="circle"></div>
+                </div>
+            </section>
+
+            <h2>Popular Electronic Tracks</h2>
+            <section class="row-wrapper" id="popular-electronic">
+                <div class="spinner">
+                    <div class="circle"></div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <footer class="footer-dark">
+        <ul class="footer__list">
+            <li class="footer__item">
+                <a href="/" onclick="buttonRoute()"><i class="fa fa-home" aria-hidden="true"></i></a><br>
+                <span class="nav-button-text">HOME</span>
+            </li>
+            <li class="footer__item">
+                <a href="/search" onclick="buttonRoute()"><i class="fa fa-search" aria-hidden="true"></i></a><br>
+                <span class="nav-button-text">SEARCH</span>
+            </li>
+            <li>
+                <a href="/library" onclick="buttonRoute()"><i class="fa fa-book" aria-hidden="true"></i></i></a><br>
+                <span class="nav-button-text">LIBRARY</span>
+            </li>
+        </ul>
+
+
+    </footer>
+</div>
+
+

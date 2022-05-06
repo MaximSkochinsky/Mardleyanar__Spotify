@@ -1,0 +1,54 @@
+<div class="wrapper">
+        <header class="header-dark">
+            <h1 id="header-dark-text"> This is your own library</h1>
+            <div class="dropdown">
+                <img class="avatar"  src="../img/avatar.jpg" width="80px" height="80px"></img>
+                <div class="dropdown-content">
+                     <a href="/account" onclick="route()">Account</a>
+                  <a href="/info" onclick="route()">Info</a>
+                  <a href="/" onclick="logOut()">Log out</a>
+                </div>
+              </div>
+        </header>
+        <div class="sort-menu">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+            <div class="select-dropdown">
+                <select onchange="sortTracks()" id="sort">
+                    <option value="1" selected>Sort by</option>
+                    <option value="2">Popularity</option>
+                    <option value="3">Title</option>
+                    <option value="4">Date of issue</option>
+                </select>
+            </div>
+        </div>
+        <section class="scroll">
+            <div class="list-wrapper" id="favorite">
+                    <h2>Your library <i class="fas fa-smile"></i></h2>
+                    <section class="row-wrapper" id="favorite-tracks">
+                        <div class="spinner">
+                            <div class="circle"></div>
+                        </div>
+                    </section>
+            </div>
+        </section>
+        <footer class="footer-dark">
+            <ul class="footer__list">
+                 <li class="footer__item">
+                    <a href="/"  onclick="buttonRoute()"><i class="fa fa-home" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">HOME</span>
+                </li>
+                <li class="footer__item">
+                    <a href="/search"  onclick="buttonRoute()"><i class="fa fa-search" aria-hidden="true"></i></a><br>
+                    <span class="nav-button-text">SEARCH</span>
+                </li>
+                <li>
+                    <a href="/library"  onclick="buttonRoute()"><i class="fa fa-book" aria-hidden="true"></i></i></a><br>
+                    <span class="nav-button-text">LIBRARY</span>
+                </li>
+            </ul>
+            
+            
+        </footer>
+        
+</div>
