@@ -13,6 +13,20 @@ const addTrackToFavorites = async (user, trackID) => {
     }).then((response) => response.json());
 }
 
+
+const removeTrackFromFavorites = async (user, trackID) => {
+    const json = {
+        user: user,
+        trackID: trackID
+    }
+
+    return fetch('/spotify/delete/favorites', {
+        method: 'POST',
+        body: JSON.stringify(json),
+        headers: { "Content-Type": "application/json" }
+    }).then((response) => response.json());
+}
+
 // get json data to put in body of POST request later
 const getJson = (formData) => {
     var object = {};
@@ -47,6 +61,8 @@ function addLoadingSpinner(parent) {
     spinner.appendChild(circle)
     parent.appendChild(spinner)
 }
+
+console.log('here')
 
 //add user to localStorage
 const addUser = (data) => {

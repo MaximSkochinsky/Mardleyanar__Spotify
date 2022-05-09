@@ -16,6 +16,10 @@ html, body {
 }
 
 
+.fa.fa-trash {
+    display: none;
+}
+
 form {
     color: #555;
     display: flex;

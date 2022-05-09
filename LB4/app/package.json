@@ -36,6 +36,7 @@
     "has": "^1.0.3",
     "has-symbols": "^1.0.3",
     "http-errors": "^2.0.0",
+    "https": "^1.0.0",
     "iconv-lite": "^0.4.24",
     "ieee754": "^1.2.1",
     "inherits": "^2.0.4",

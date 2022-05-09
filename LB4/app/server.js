@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const {createUser, findUser, updateUser, createUserFavorites, updateUserFavorites, getUserFavorites, removeUserFavorites, 
-    checkTokensCollection, getCredentialsFromDB, insertCredentialsInDB, updateCredentialsInDB} = require("./db")
+    checkTokensCollection, getCredentialsFromDB, insertCredentialsInDB, updateCredentialsInDB, createUserHistory} = require("./db")
 const bodyParser = require('body-parser');
 const {MongoClient} = require("mongodb");
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -29,12 +29,11 @@ client.connect().then(async () => {
         updateApiCred();
         if(spotifyCred['time']){
             refreshAccessToken().catch(err => {
+                console.log('1')
                 console.log(err);
-                process.exit(0);
             });
         } else{
             console.log('invalid cred. no time');
-            process.exit(0);
         }
     }
     
@@ -59,11 +58,13 @@ client.connect().then(async () => {
         return new Promise((reject) => {
             let expiresUnixTime = spotifyCred['time'] + (3600 * 1000);
             if (Date.now() > expiresUnixTime) {
-                spotifyApi.clientCredentialsGrant().then(async (data) => {
+                spotifyApi.clientCredentialsGrant().then((data) => {
                         spotifyCred['access_token'] = data.body['access_token'];
-                        await saveCred();
+                        saveCred();
+                        updateApiCred();
                     },
                     function (err) {
+                        console.log('2')
                         reject(err);
                     });
             }
@@ -142,7 +143,7 @@ client.connect().then(async () => {
     app.post('/spotify/update/favorites', async (req, res) => {
         const data = req.body;
         const favorites = await getUserFavorites(client, data.user);
-    
+        
         if(favorites.includes(data.trackID)){
             await removeUserFavorites(client, data.trackID, data.user);
             res.send({result: "remove"})
@@ -151,6 +152,19 @@ client.connect().then(async () => {
     
         await updateUserFavorites(client, data.trackID, data.user)
         res.send({result: "add"})
+    })
+
+
+
+    app.post('/spotify/delete/favorites', async (req, res) => {
+        const data = req.body;
+        const favorites = await getUserFavorites(client, data.user);
+        
+        if(favorites.includes(data.trackID)){
+            await removeUserFavorites(client, data.trackID, data.user);
+            res.send({result: "remove"})
+            return;
+        }
     })
     
     
@@ -172,6 +186,7 @@ client.connect().then(async () => {
                 console.log(result)
                 res.send(result)
             }, function(err) {
+                console.log('3')
                 console.log('Something went wrong!', err);
             });
         });
@@ -217,6 +232,8 @@ client.connect().then(async () => {
                     })
                 }
                 res.send(sortedTracks)
+            }, (err) => {
+                console.log('4')
             }
         )
     })
@@ -231,6 +248,7 @@ client.connect().then(async () => {
                 let topTracks = data.body.items;
                 res.send(topTracks)
             }, function (err) {
+                console.log('5')
                 console.log(err);
                 res.send([]);
             });
@@ -245,6 +263,7 @@ client.connect().then(async () => {
             let topPlaylistTracks = data.body.tracks.items;
             res.send(topPlaylistTracks)
         }, function(err) {
+            console.log('6')
             console.error(err);
             res.send([]);
         });
@@ -257,6 +276,7 @@ client.connect().then(async () => {
             let topPlaylistTracks = data.body.tracks.items;
             res.send(topPlaylistTracks)
         }, function(err) {
+            console.log('7')
             console.error(err);
             res.send([]);
         });
@@ -264,6 +284,30 @@ client.connect().then(async () => {
     
     app.get('/spotify/topElectronicPlaylist', (req, res) => {
         spotifyApi.getPlaylist('37i9dQZF1DXdXliePGSvEb', {limit: 15})
+        .then(function(data) {
+            let topPlaylistTracks = data.body.tracks.items;
+            res.send(topPlaylistTracks)
+        }, function(err) {
+            console.log('8')
+            console.error(err);
+            res.send([]);
+        });
+    })
+
+    app.get('/spotify/topVideoGamePlaylist', (req, res) => {
+        spotifyApi.getPlaylist('37i9dQZF1DXdfOcg1fm0VG')
+        .then(function(data) {
+            let topPlaylistTracks = data.body.tracks.items;
+            res.send(topPlaylistTracks)
+        }, function(err) {
+            console.error(err);
+            res.send([]);
+        });
+    })
+
+
+    app.get('/spotify/globalTop', (req, res) => {
+        spotifyApi.getPlaylist('37i9dQZEVXbMDoHDwVN2tF')
         .then(function(data) {
             let topPlaylistTracks = data.body.tracks.items;
             res.send(topPlaylistTracks)
@@ -276,7 +320,7 @@ client.connect().then(async () => {
     
     
     app.get('/spotify/auth', (req, res) => {
-        console.log('sadasdasd');
+        console.log('sadasdasddd');
         const authorizeURL = spotifyApi.createAuthorizeURL(['user-read-private', 'user-read-email', 'user-top-read']);
         res.redirect(authorizeURL);
     });
@@ -291,8 +335,8 @@ client.connect().then(async () => {
                 res.redirect('/');
             },
             function (err) {
+                console.log('9')
                 res.send(err);
-                process.exit(0);
             }
         );
     })

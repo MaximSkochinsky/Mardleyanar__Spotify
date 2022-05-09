@@ -15,6 +15,10 @@ header {
 }
 
 
+.fa.fa-trash {
+    display: none;
+}
+
 footer {
     flex: 1;
 }

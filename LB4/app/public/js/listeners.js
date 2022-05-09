@@ -16,6 +16,7 @@ const buttonRoute = (event) => {
 
 
 const logIn = async (event) => {
+    console.log('here')
     event = event || window.event;
     event.preventDefault();
 
@@ -38,10 +39,16 @@ const logIn = async (event) => {
 
 
 const signUp = async (event) => {
+    console.log('here')
     event = event || window.event;
     event.preventDefault();
 
     const json = getJson(new FormData(document.forms.signup));
+
+    if (!validateEmail(json.email) || json.length > 20) {
+        alert('No valid email!')
+        return 
+    }
 
     const data = await fetch('/content/signup', 
     {

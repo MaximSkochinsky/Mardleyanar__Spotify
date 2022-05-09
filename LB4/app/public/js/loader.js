@@ -4,7 +4,9 @@ const playlistUrls = {
     'popular-rock' : '/spotify/topRockPlaylist',
     'popular-electronic': '/spotify/topElectronicPlaylist',
     'searched-tracks': '/spotify/searchTracksByCriteria',
-    'favorite-tracks': '/spotify/library/favorites'
+    'favorite-tracks': '/spotify/library/favorites',
+    'popular-gaming': '/spotify/topVideoGamePlaylist',
+    'global-top': '/spotify/globalTop'
 }
 
 
@@ -77,6 +79,15 @@ function createTrackCard(playlistElement, track){
     const imageWrapper = document.createElement('div');
     imageWrapper.classList.add("image_wrapper")
     imageWrapper.id = track.id
+    // imageWrapper.onclick = (event) => {
+    //     let path = event.path
+    //     if (path[0].className === "fa fa-pause") {
+    //         path.shift()
+    //     }
+    //     if (path[1].id) {
+    //         addToHistory(path[1].id)
+    //     }
+    // }
 
     const image = document.createElement('img');
     image.src  = track.album.images[0]['url'];
@@ -116,8 +127,21 @@ function createTrackCard(playlistElement, track){
         })
     }
 
+    const removeFromFavoritesButton = document.createElement("i")
+    removeFromFavoritesButton.classList.add("fa", "fa-trash")
+    removeFromFavoritesButton.setAttribute("aria-hidden", "true")
+    removeFromFavoritesButton.onclick = (event) => {
+        console.log(event.path[2].firstChild.id)
+        const trackID = event.path[2].firstChild.id;
+        
+        removeTrackFromFavorites(localStorage.getItem("user"), trackID).then(data => {
+            window.location.reload()
+        })
+    }
+
 
     extraOptions.appendChild(addToFavoritesButton)
+    extraOptions.appendChild(removeFromFavoritesButton)
     figcaption.appendChild(artist)
     figcaption.appendChild(albom)
 

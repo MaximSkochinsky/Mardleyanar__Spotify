@@ -45,8 +45,31 @@ module.exports = {
         const data = await client.db("test").collection("favorites").findOne(
             {"user": user}
         )
-        return data.trackIDS;
+        if (data) return data.trackIDS;
     },
+
+    // createUserHistory: async(client, newUser) => {
+    //     return await client.db("test").collection("history").insertOne(
+    //         {
+    //             "user": newUser.user,
+    //             "trackIDS": []
+    //         }
+    //     )
+    // },
+
+    // updateUserHistory: async (client, id, user) => {
+    //     return await client.db("test").collection("history").updateOne(
+    //         { "user": user },
+    //         { $addToSet: { "trackIDS": id } }
+    //     )
+    // },
+
+    // getUserHistory: async (client, user) => {
+    //     const data = await client.db("test").collection("history").findOne(
+    //         {"user": user}
+    //     )
+    //     if (data) return data.trackIDS;
+    // },
 
     checkTokensCollection:  async (client) => {
         return await client.db("test").collection("tokens").count()

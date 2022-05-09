@@ -140,6 +140,22 @@ input[type=submit] {
     color: black;
 }
 
+.fa.fa-trash {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+.extra-buttons {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
  .image_wrapper:hover .item__avatar {
     opacity: 0.1;
 }
