@@ -6,3 +6,4 @@ Jenkinsfile
 credentials.json
 test.js
 config.js
+package-lock.json
