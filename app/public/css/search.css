@@ -33,7 +33,7 @@ form {
     background: transparent;
     margin: 0;
     font-size: 14px;
-    color: inherit;
+    color: white;
     border: 5px solid transparent;
     border-radius: inherit;
   }
@@ -85,6 +85,11 @@ form {
     height: auto;
     border: 5px solid rgb(0, 0, 0);
 }
+
+.header-dark {
+    padding-left: 10%;
+}
+
 
 @media only screen and (max-width: 875px) {
     form{

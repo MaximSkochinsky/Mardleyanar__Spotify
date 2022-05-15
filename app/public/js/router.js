@@ -6,7 +6,8 @@ const routes = {
     "/signup": "signup",
     "/search": "search",
     "/library": "library",
-    "/intelligence": 'intelligence'
+    "/intelligence": 'intelligence',
+    "/settings": "settings"
 }
 
 const handleLocation = async () => {

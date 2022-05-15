@@ -45,9 +45,19 @@ const signUp = async (event) => {
 
     const json = getJson(new FormData(document.forms.signup));
 
-    if (!validateEmail(json.email) || json.length > 20) {
+    if (json.email.length == 0 || json.user.length == 0 || json.password.length == 0) {
+        alert('Error!!! Empty sign up data!!!')
+        return
+    }
+
+    if (!validateEmail(json.email) || json.email.length > 20) {
         alert('No valid email!')
         return 
+    }
+
+    if (json.user.length > 20) {
+        alert('No valid username!(length more than 20 symbols)');
+        return;
     }
 
     const data = await fetch('/content/signup', 

@@ -9,9 +9,6 @@
 }
 
 
-.header-dark {
-    padding-left: 35%;
-}
 
 
 
@@ -35,24 +32,31 @@
 .current_info_item {
     padding: 30px 0px 0px 50px;
     min-width: 25%;
-    font-size: 80px;
+    font-size: 60px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 
 .check_info {
-    padding-left: 50%;
+    padding-left: 65%;
     max-width: 500px;
 }
 
 
 
 .fa.fa-angle-right {
-    font-size: 125px;
+    font-size: 105px;
     color: black;
+    margin-top: -10px;
 }
 
 
-
+.header-dark {
+    padding-left: 35%;
+}
 
 
 

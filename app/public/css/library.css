@@ -116,9 +116,12 @@ select, option {
 }
 
 .scroll {
-    min-height: 80vh;
+    min-height: 67vh;
     overflow-y: hidden;
 }
+
+
+
 
 .item__avatar {
     width: 220px;
@@ -126,6 +129,19 @@ select, option {
     min-width: 200px;
     min-height: 200px;
     border: 5px solid rgb(0, 0, 0);
+}
+
+.header-dark {
+    padding-left: 10%;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.row-wrapper::-webkit-scrollbar {
+    display:flex;
 }
 
 

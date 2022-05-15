@@ -1,7 +1,5 @@
 
-.header-dark {
-    padding-left: 35%;
-}
+
 
 .key {
     font-size: 40px;
@@ -13,6 +11,16 @@
     max-width: 100%;
     overflow: hidden;
 }
+
+.header-dark {
+    padding-left: 35%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 .user__info {
     min-width: calc(100% - 10px * 2);

@@ -6,7 +6,8 @@ const playlistUrls = {
     'searched-tracks': '/spotify/searchTracksByCriteria',
     'favorite-tracks': '/spotify/library/favorites',
     'popular-gaming': '/spotify/topVideoGamePlaylist',
-    'global-top': '/spotify/globalTop'
+    'global-top': '/spotify/globalTop',
+    'fifa-soundtrack': '/spotify/fifaSoundtrack'
 }
 
 
@@ -26,8 +27,7 @@ function loadTracks(playlistElement, crieteria){
             return response.json()
         }).then(data => {
             if(data.length === 0) {
-                console.log('reject');
-                reject('Playlist ' + playlistName + ' empty data');
+                document.querySelector('.spinner').remove()
                 return;
             }
 
