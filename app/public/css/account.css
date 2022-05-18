@@ -23,6 +23,7 @@
 
 
 .user__info {
+    height: 61vh;
     min-width: calc(100% - 10px * 2);
     margin-left: 50px;
     padding-top: 50px;
