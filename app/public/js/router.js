@@ -1,3 +1,4 @@
+
 const routes = {
     404: "404",
     "/": "home",

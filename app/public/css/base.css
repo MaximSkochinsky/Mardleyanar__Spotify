@@ -398,8 +398,12 @@ figure {
         height: 90px;
     }
 
+    .header-dark {
+        max-height: 120px;
+    }
+
     h1 {
-        font-size: 36px;
+        font-size: 20px;
     }
 
     h2 {

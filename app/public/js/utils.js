@@ -89,6 +89,7 @@ function validateEmail(email) {
 // pushing all searched tracks to search page
 const searchHandler =  async (event) =>{
     event.preventDefault()
+    
 
     const json = {
         value: document.getElementById('search_text').value

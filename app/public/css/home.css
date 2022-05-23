@@ -50,7 +50,8 @@ footer {
 
 @media only screen and (max-width: 500px) {
     .header-dark h1 {
-        font-size: 23px;
+        font-size: 20px;
+        margin-left: -40px;
     }
 
     h2 {

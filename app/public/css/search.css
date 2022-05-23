@@ -108,7 +108,8 @@ form {
     }
 
     .header-dark h1 {
-        font-size: 22px;
+        font-size: 20px;
+        margin-left: -10px;
     }
 
     .list-wrapper h1 {

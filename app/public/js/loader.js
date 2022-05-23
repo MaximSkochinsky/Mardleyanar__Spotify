@@ -11,6 +11,20 @@ const playlistUrls = {
 }
 
 
+function createNoTracksText () {
+    if (window.location.pathname !== '/library') return
+    if (document.getElementById('favorite-tracks').childNodes.length < 2 && !document.getElementById('no-tracks-text')) {
+        const noTracksText = document.createElement('span');
+        noTracksText.innerHTML = "You don't have any favorite tracks..."
+        if (window.innerWidth > 600) noTracksText.style.fontSize = "60px"
+        else noTracksText.style.fontSize = "20px"
+        noTracksText.style.color = "white"
+        noTracksText.id = "no-tracks-text"
+        document.getElementById('favorite').appendChild(noTracksText)
+    }
+}
+
+
 function loadTracks(playlistElement, crieteria){
     return new Promise((resolve, reject) => {
         let playlistName = playlistElement.id;
@@ -28,13 +42,23 @@ function loadTracks(playlistElement, crieteria){
         }).then(data => {
             if(data.length === 0) {
                 document.querySelector('.spinner').remove()
+                console.log('asdasdasdasd')
+                createNoTracksText()
                 return;
             }
 
+           
+
             data.forEach(element => {
-                if (element.track) createTrackCard(playlistElement, element.track);
+                if (element.track) {
+                    createTrackCard(playlistElement, element.track);
+                }
                 else createTrackCard(playlistElement, element)
             });
+
+
+            console.log(document.getElementById('no-tracks-text'))
+            createNoTracksText()
 
             resolve(playlistName);
         });
@@ -230,6 +254,7 @@ function loadFavoriteTracks () {
         if(child.tagName === 'SECTION'){
             loadTracks(child, json).then(r => {
                 if (child.querySelector('.spinner'))  child.removeChild(child.querySelector('.spinner'))
+                console.log(r)
             }).catch(err => {
                 console.log(err);
             })

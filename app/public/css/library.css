@@ -35,6 +35,7 @@ nav {
 }
 
 .sort-menu {
+    margin-top: -30px;
     display: flex;
     align-items: center;
     min-height: 20%;
@@ -116,8 +117,14 @@ select, option {
 }
 
 .scroll {
-    min-height: 67vh;
-    overflow-y: hidden;
+    margin-top: -40px;
+    min-height: 37vh;
+    overflow-y:scroll;
+}
+
+.scroll h2 {
+    margin-top: 10px;
+    text-align: center;
 }
 
 
@@ -189,6 +196,11 @@ select, option {
 
     .sort-menu {
         margin-left: 20px;
+    }
+
+
+    span#no-tracks-text {
+        font-size: 20px;
     }
 
 }
