@@ -12,6 +12,22 @@ const playlistUrls = {
 
 
 function createNoTracksText () {
+    if (window.location.pathname === '/search') {
+        if (document.getElementById('searched-tracks').childNodes.length == 0) {
+            const noTracksDiv = document.createElement('div')
+            noTracksDiv.style.color = "white";
+            noTracksDiv.style.fontSize = "55px";
+            noTracksDiv.style.textAlign = "center";
+            noTracksDiv.style.margin = "0px auto";
+            noTracksDiv.style.display = "block";
+            const span = document.createElement('span')
+            span.innerHTML = "No tracks..."
+
+            noTracksDiv.appendChild(span)
+            document.getElementById('searched-tracks').appendChild(noTracksDiv)
+        }
+    } 
+
     if (window.location.pathname !== '/library') return
     if (document.getElementById('favorite-tracks').childNodes.length < 2 && !document.getElementById('no-tracks-text')) {
         const noTracksText = document.createElement('span');
