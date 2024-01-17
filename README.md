@@ -18,5 +18,5 @@
 ### https://www.figma.com/file/BPAswx65A1EGIBdH8WHAG0/Spotify?node-id=0%3A1
 
 ## Link 2 (app):
-### https://spotify-app-d89c279792c9.herokuapp.com/spotify/callback
+### https://spotify-app-d89c279792c9.herokuapp.com/spotify/auth
 
